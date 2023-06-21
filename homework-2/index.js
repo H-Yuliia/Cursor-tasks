@@ -1,23 +1,42 @@
-function button() {
-  let n = parseInt(prompt("Введіть ціле число"));
-  let m = parseInt(prompt("Введіть ціле число"));
-  if (isNaN(n) && isNaN(m)) {
-  } else {
-  }
+  let n = Number(prompt("Введіть перше ціле число"));
+  while(!Number.isInteger(n) || n <= 0){
+    n = Number(prompt("Введіть ЦІЛЕ число")); 
+    }
 
-  const acces = confirm("Пропускати парні числа?");
-  if (acces === true) {
-    for (let result = 0; n <= m; n++) {
-      if (n % 2 === 0) {
-        continue;
-      }
-      result += n;
-      console.log(result);
+  let m = Number(prompt("Введіть друге ціле число"));
+  while (!Number.isInteger(m) || m <= n){
+    m = Number(prompt("Введіть ЦІЛЕ число та більше за попереднє")); 
     }
-  } else if (acces !== true) {
-    for (let result = 0; n <= m; n++) {
-      result += n;
-      console.log(result);
-    }
+//------------------------------------------------------------
+  let access = confirm("Пропускати парні числа?");
+  let sumOfNumbers = 0;
+
+  for(let i = n; i <= m; i++){
+  if(access && i % 2 === 0){
+    continue;
   }
-}
+  else {
+    sumOfNumbers += i;
+  }
+  };
+console.log(`Сума чисел: ${sumOfNumbers}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
