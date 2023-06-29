@@ -52,6 +52,7 @@ function getDividedByFive(...numbers){
 //8 ------------------------------------------
 
 function replaceBadWords(string) {
+    string = string.toLowerCase()
     let words = string.split(" ");
     for (let i = 0; i < words.length; i++) {
         if (words[i].includes("shit")) {
@@ -63,7 +64,7 @@ function replaceBadWords(string) {
     }
     return words.join(" ");
 }
-console.log("№8 Зміна поганих слів на зірочки: ", replaceBadWords(`Are you fucking kidding me?`));
+console.log("№8 Зміна поганих слів на зірочки: ", replaceBadWords(`Shit, are you fucking kidding me?`));
 
 //9 ------------------------------------------
 function divideByThree(word) {
