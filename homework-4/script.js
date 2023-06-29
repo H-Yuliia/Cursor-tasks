@@ -32,7 +32,6 @@ console.log(nameOfThemes);
 
 // #3
 function getMark(marks) {
-  let students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
   let studentsWithMarks = [];
   for (let i = 0; i < marks.length; i++) {
     studentsWithMarks.push([students[i], marks[i]]);
