@@ -38,36 +38,36 @@ function getSubjects(student) {
 console.log(getSubjects(students[0]))
 
 //2
-function getAverageMark(student){
-let allMarks = [];
-for(let subject in student.subjects) {
-    allMarks = allMarks.concat(student.subjects[subject])
-}
-let averageMark =
-allMarks.reduce((accumulator, currentValue) => accumulator + currentValue) /
-allMarks.length;
-  
-return averageMark.toFixed(2);
+function getAverageMark(student) {
+    let allMarks = [];
+    for (let subject in student.subjects) {
+        allMarks = allMarks.concat(student.subjects[subject])
+    }
+    let averageMark =
+        allMarks.reduce((accumulator, currentValue) => accumulator + currentValue) /
+        allMarks.length;
+
+    return averageMark.toFixed(2);
 }
 console.log(`Середній бал студента: ${getAverageMark(students[0])}`)
 
 // 3
-function getStudentInfo(students){
+function getStudentInfo(students) {
     let averageMark = getAverageMark(students);
     let student = {
         name: students.name,
         course: students.course,
         "average mark": averageMark
     }
-    return {student};
+    return { student };
 }
 console.log(getStudentInfo(students[0]))
 
 // 4 
-function getStudentsNames(students){
+function getStudentsNames(students) {
     const studentsNames = [];
-    for(let key of students){
-      studentsNames.push(key.name);
+    for (let key of students) {
+        studentsNames.push(key.name);
     }
     return studentsNames.sort();
 
@@ -77,29 +77,29 @@ console.log(getStudentsNames(students))
 // 5
 
 function getBestStudent(students) {
-let highestAverageMark = 0;
-let bestStudent = null   
-for (const student of students){
-    let marks =  getAverageMark(student)
-if (marks > highestAverageMark) {
-    highestAverageMark = marks;
-    bestStudent = student.name;
-}
-  }
-return bestStudent;
+    let highestAverageMark = 0;
+    let bestStudent = null
+    for (const student of students) {
+        let marks = getAverageMark(student)
+        if (marks > highestAverageMark) {
+            highestAverageMark = marks;
+            bestStudent = student.name;
+        }
+    }
+    return bestStudent;
 }
 console.log(`Студент з найкращими балами: ${getBestStudent(students)}`)
 
 // 6
 
-function calculateWordLetters(word){
+function calculateWordLetters(word) {
     let letters = {};
-    for(let letter of word){
-        if(letters[letter]){
-         letters[letter]++
+    for (let letter of word) {
+        if (letters[letter]) {
+            letters[letter]++
         }
-        else{
-         letters[letter] = 1
+        else {
+            letters[letter] = 1
         }
     }
     return letters;
