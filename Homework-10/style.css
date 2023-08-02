@@ -9,7 +9,9 @@ body {
 
 .keys {
 	display: flex;
-	justify-content: center;
+	width: 80%;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .key {
