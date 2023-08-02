@@ -1,0 +1,47 @@
+body {
+	background: url(./photo/background.jpeg)0/auto 200% no-repeat;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.keys {
+	display: flex;
+	justify-content: center;
+}
+
+.key {
+	border: .4rem solid #4b85e3;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all .07s ease;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(165, 185, 221, 0.52);
+	text-shadow: 0 0 .5rem black;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: #ffc600;
+	box-shadow: 0 0 1rem #ffc600;
+}
+
+
+
+.sound {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: #ffc600;
+}
